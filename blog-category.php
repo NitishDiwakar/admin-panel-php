@@ -1,6 +1,7 @@
 <?php  
 	include 'include/session.php';
 	include 'include/connection.php';
+	include 'include/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,13 +90,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
-<?php  
-	if(isset($_SESSION['msg']))
-	{
-		echo $_SESSION['msg'];
-		unset($_SESSION['msg']);
-	}
-?>
+<?php showMessage(); ?>
  <div class="pull-right">
 	<button class="btn btn-success" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"> Add Category</i></button>
 </div>
