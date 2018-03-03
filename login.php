@@ -1,6 +1,8 @@
 <?php  
 	session_start();
 	include 'include/connection.php';
+	include 'include/functions.php';
+	checkNotLogin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
