@@ -2,7 +2,7 @@
 	session_start();
 	include 'include/connection.php';
 	include 'include/functions.php';
-	checkNotLogin();
+	checkNotLogin(); // Redirect to index page if already logged in
 ?>
 <!DOCTYPE html>
 <html lang="en">
