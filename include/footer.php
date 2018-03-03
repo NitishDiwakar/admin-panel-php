@@ -3,7 +3,7 @@
 					<div class="footer-content">
 						<span class="bigger-120">
 							<span class="blue bolder">Designed &amp; Developed by</span>
-							Wisdom Web Solutions &copy; 2017
+							Nitish Kumar Diwakar &copy; <?php echo Date("Y"); ?>
 						</span>
 
 						&nbsp; &nbsp;
