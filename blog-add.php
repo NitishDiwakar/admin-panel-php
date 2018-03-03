@@ -1,6 +1,7 @@
 <?php  
 	include 'include/session.php';
 	include 'include/connection.php';
+	include 'include/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
