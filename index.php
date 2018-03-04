@@ -104,7 +104,7 @@
 									Welcome to
 									<strong class="green">
 										Ace
-										<small>(v1.4)</small>
+										<!-- <small>(v1.4)</small> -->
 									</strong>
 								</div>
 
