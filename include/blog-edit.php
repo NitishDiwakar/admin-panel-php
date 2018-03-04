@@ -11,8 +11,18 @@
 	// $blog_banner  = $_REQUEST['blog_image'];
 	if (!empty($_FILES['image']['name']))
 	{
-		// n
+
 		$pic= ($_FILES['image']['name']);
+		// Check if file type is valid image
+		$allowed =  array('png' ,'jpg');
+		$ext     = pathinfo($pic, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) 
+		{
+			$_SESSION['msg'] = '<div class="alert alert-danger"><i class="fa fa-times"></i> Only .jpg and .png extenstions are allowed.</div>';
+			echo "<script>window.location = '../blogs.php'</script>";
+			exit();
+		}
+
 		$date = date('Y-m-d h:i:s');
 		$date = strtotime($date);
 

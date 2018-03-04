@@ -12,8 +12,17 @@
 		$blog_descr   = $_REQUEST['blog_descr'];
 		$blog_tags    = $_REQUEST['blog_tags'];
 
-		// n
 		$pic= ($_FILES['image']['name']);
+		// Check if if file type is valid image
+		$allowed =  array('png' ,'jpg');
+		$ext     = pathinfo($pic, PATHINFO_EXTENSION);
+		if(!in_array($ext,$allowed) ) 
+		{
+			$_SESSION['msg'] = '<div class="alert alert-danger"><i class="fa fa-times"></i> Only .jpg and .png extenstions are allowed.</div>';
+			echo "<script>window.location = '../blog-add.php'</script>";
+			exit();
+		}
+
 		$date = date('Y-m-d h:i:s');
 		$date = strtotime($date);
 
@@ -22,7 +31,7 @@
 	    $target_file = $target_dir . $pic;
 	  move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
-        // e n
+        
 		
 		$sql = "INSERT INTO tbl_blog 
 		(
