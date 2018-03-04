@@ -2,12 +2,12 @@
 	include 'session.php';
 	include 'connection.php';
 
-	$id           = $_REQUEST['id'];
-	$blog_title   = $_REQUEST['blog_title'];
-	$blog_slug    = $_REQUEST['blog_slug'];
-	$blog_cat     = $_REQUEST['blog_cat'];
-	$blog_descr   = $_REQUEST['blog_descr'];
-	$blog_tags    = $_REQUEST['blog_tags'];
+	$id         = $_REQUEST['id'];
+	$blog_title = $_REQUEST['blog_title'];
+	$blog_slug  = $_REQUEST['blog_slug'];
+	$blog_cat   = $_REQUEST['blog_cat'];
+	$blog_descr = $_REQUEST['blog_descr'];
+	$blog_tags  = $_REQUEST['blog_tags'];
 	// $blog_banner  = $_REQUEST['blog_image'];
 	if (!empty($_FILES['image']['name']))
 	{
@@ -23,12 +23,12 @@
 			exit();
 		}
 
-		$date = date('Y-m-d h:i:s');
-		$date = strtotime($date);
-
-		$pic =  $date . '_' . $pic;
-	    $target_dir = "../uploads/blogs/";
-	    $target_file = $target_dir . $pic;
+		$date        = date('Y-m-d h:i:s');
+		$date        = strtotime($date);
+		
+		$pic         =  $date . '_' . $pic;
+		$target_dir  = "../uploads/blogs/";
+		$target_file = $target_dir . $pic;
 	  move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 
         // e n
