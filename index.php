@@ -49,7 +49,6 @@
 
 	<body class="no-skin">
 		<?php include 'include/header.php'; ?>
-
 		<div class="main-container ace-save-state" id="main-container">
 			<script type="text/javascript">
 				try{ace.settings.loadState('main-container')}catch(e){}
